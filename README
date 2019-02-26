@@ -1,1 +1,22 @@
 Sdílený repositář, kde spolu budeme sdílet všechno, co se sdílet dá ohledně CDD neboli počítačového návrhu léčiv
+
+Prvně bude potřeba git, jehož pomocí si tento repozitář můžeme naklonovat:
+https://git-scm.com/
+
+Naklonování repozitáře:
+    git clone CESTA
+
+Dále se nám bude hodit conda, slouží pro vytvoření vývojového prostředí plus je to i balíčkovací systém pro Python:
+https://docs.conda.io/en/latest/miniconda.html
+
+Vytvoření prostředí:
+    conda create -n JMÉNO_PROSTŘEDÍ BALÍČKY
+
+pro nás se speciálně hodí (parametr c je pro jiný něž globální kanál):
+    conda create -n pnl -c rdkit rdkit rdkit-postgresql jupyter
+
+pokud jste na metacentru, tak je problém, že tam není X-server
+    conda create -n pnl -c rdkit rdkit-postgresql rdkit cairo nox
+    conda activate pnl
+    pip install jupyter
+    # lepší řešení se zatím nenašlo
