@@ -1,0 +1,8 @@
+1) Stáhněte si nějaké aktivní struktury pro jeden cíl (nejlépe z ChEMBLu), bylo by dobré, kdyby byly už s naměřenou hodnotou např. EC50, IC50
+   Lépe rovnou agonisty a antagonisty
+   Je potřeba alespoň 200 látek
+
+2) Vytvořte s Vašimi aktivními látkami PCA mapu, buď vyneste a porovnejte ago a anta, nebo použijte náhodné sloučeniny jako pozadí.
+
+3) Natrénujte model, který predikuje aktivitu. Popř. klasifikátor, který určí, zda se jedná o antagonistu nebo agonistu.
+   Použijte rozumné deskriptoru a predikční výkon určtete nějakou vhodnou metrikou.

@@ -13,10 +13,16 @@ Vytvoření prostředí:
     conda create -n JMÉNO_PROSTŘEDÍ BALÍČKY
 
 pro nás se speciálně hodí (parametr c je pro jiný něž globální kanál):
-    conda create -n pnl -c rdkit rdkit rdkit-postgresql jupyter
+    conda create -n pnl -c rdkit python=3 rdkit rdkit-postgresql jupyter seaborn scikit-learn
 
 pokud jste na metacentru, tak je problém, že tam není X-server
     conda create -n pnl -c rdkit rdkit-postgresql rdkit cairo nox
     conda activate pnl
+    # možná i source activate pnl
     pip install jupyter
-    # lepší řešení se zatím nenašlo
+    
+    lepší řešení se možná se našlo, nainstalujte:
+    apt install libxext6 libxrender-dev
+    
+pokud něco blokuje port můžete se kouknout:
+netstat -tulpn
