@@ -42,3 +42,13 @@ create table drugbank.molecule (
     SMILES text
 );
 
+create table drugbank.synonyms (
+    id serial primary key,
+    molid int references drugbank.molecule(id),
+    name text
+);
+
+grant all on all sequences in schema drugbank to script;
+grant all on all functions in schema drugbank to script;
+grant all on all tables in schema drugbank to script;
+
