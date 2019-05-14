@@ -42,6 +42,13 @@ create table drugbank.molecule( -- drugbank. definuje namespace; tabulka molecul
     SMILES text   
 );
 
+create table drugbank.synonym( --predpoklad vztahu 1:N
+    id serial primary key,
+    molid int references drugbank.molecule(id),
+    name text
+);
+
+
 grant all schema grugbank to script;
 grant all on all sequences in schema drugbank to script;
 grant all on all functions in schema drugbank to script;
